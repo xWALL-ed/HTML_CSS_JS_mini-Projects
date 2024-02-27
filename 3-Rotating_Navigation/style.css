@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #333;
+    color: #222;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+/* Full Container */
+
+.container{
+    background-color: #fafafa;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 50px;
+    transform-origin: top left;
+    transition: transform 0.5s linear;
+}
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+
+/* Contents */
+
+.content{
+    max-width: 1000px;
+    margin: 50px auto;
+}
+.content img{
+    max-width: 100%;
+}
+.content h1{
+    margin: 0;
+}
+.content small{
+    color: #555;
+    font-style: italic;
+}
+.content p{
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Circles And Nav Open Close Btn */
+
+.circle-container{
+    position: fixed;
+    left: -100px;
+    top: -100px;
+    z-index: 1;
+}
+.circle{
+    position: relative;
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in;
+}
+.circle.active{
+    transform: rotate(-90deg);
+}
+.circle button{
+    color: #fff;
+    position: absolute;
+    font-size: 27px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.circle button:focus{
+    outline: none;
+}
+.circle button:active{
+    transform: scale(0.98);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5), /* Outer glow */
+                0 0 20px 5px rgba(255, 255, 255, 0.5) inset; /* Inner glow */
+}
+.circle button#open {
+    top: 62%;
+    left: 59%;
+}
+.circle button#close {
+    top: 59%;
+    right: 64%;
+}
+/* Nav and Icons */
+.nav-container{
+    position: fixed;
+    bottom: 5%;
+    left: 0;
+    z-index: -1;
+}
+.nav-container.active{
+    z-index: 1;
+}
+.nav-container a{
+    text-decoration-line: none;
+    color: #fff;
+    transition: box-shadow 0.2s ease;
+}
+.nav-container a:hover{
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5), /* Outer glow */
+                0 0 20px 5px rgba(0, 0, 0, 0.5) inset; /* Inner glow */
+}
+.nav-container ul{
+    list-style: none;
+    padding-left: 30px;
+}
+.nav-container ul li{
+    text-transform: uppercase;
+    color: #fff;
+    margin: 40px 0;
+    transform: translateX(-160%);
+    transition: transform 0.5s ease-in 0.1s;
+}
+.nav-container.active ul li{
+    transform: translateX(0%);
+}
+.nav-container ul li i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.nav-container ul li + li{
+    margin-left: 15px;
+}
+.nav-container ul li + li + li{
+    margin-left: 30px;
+}
