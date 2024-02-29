@@ -124,11 +124,11 @@ body{
         left: 50%;
         width: 4px;
         height: 0%;
-        transform: translateX(-45%);
+        transform: translateX(-50%);
     }
     .btn{
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 150%;
     }
     .btn#prev{
