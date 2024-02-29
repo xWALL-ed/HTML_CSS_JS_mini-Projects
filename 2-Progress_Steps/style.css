@@ -134,6 +134,16 @@ body{
     .btn#prev{
         left: -380%;
         
+    }   
+}
+@media(max-width: 255px){
+    .btn{
+        position: absolute;
+        top: -15%;
+        left: -118%;
     }
-    
+    .btn#prev{
+        top: 102%;
+        left: -115%;
+    } 
 }
