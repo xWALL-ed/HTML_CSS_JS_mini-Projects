@@ -10,6 +10,7 @@ btnOpen.addEventListener('click',()=>{
     container.classList.add("show-nav");
     nav.classList.add("active");
     body.style.overflow="hidden";
+    container.style.transformOrigin=`0px ${(container.getBoundingClientRect().top+10) * (-1)}px`;
 });
 btnClose.addEventListener('click',()=>{
     circle.classList.remove("active");
