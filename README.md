@@ -1,6 +1,8 @@
 # HTML_CSS_JS_mini-Projects
 HTML CSS and JS, Trivial Projects
 
+Note: Gifs with <a href="https://www.cockos.com/licecap/"> LICEcap <a>
+
 * <h4>Demo : Expanding Cards </h4>
 
 * <h4>Demo : Progress Steps </h4>
