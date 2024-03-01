@@ -100,6 +100,17 @@ body{
     transform: none;
     cursor: not-allowed;
 }
+@media(min-width: 400px){
+    @media(max-height: 100px){
+        .progress-container{
+            margin-bottom: 0px;
+        }
+        .btn{
+            padding: 0px 30px;
+            margin: 2px;
+        }
+    }
+}
 
 @media(max-width: 400px){
     .container{
@@ -134,7 +145,44 @@ body{
     .btn#prev{
         left: -380%;
         
-    }   
+    }
+    @media(max-height: 445px){
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn{
+            position: initial;
+            padding: 5px 30px;
+            margin: 2px;
+            transition: none;
+        }
+        .btn#prev{
+            order: 1;
+        }
+        .progress-container{
+            order: 2;
+        }
+        .btn#next{
+            order: 3;
+        }
+    }
+    @media(max-height: 175px){
+        .circle:nth-child(3),.circle:nth-child(4),.circle:nth-child(5){
+            display: none;
+        }
+        .circle:nth-child(2){
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 20%;
+            border: 1px solid steelblue;
+            width: 50px;
+        }
+    }
 }
 @media(max-width: 255px){
     .btn{
@@ -145,5 +193,42 @@ body{
     .btn#prev{
         top: -15%;
         left: -118%;
-    } 
+    }
+    @media(max-height: 445px){
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn{
+            position: initial;
+            padding: 5px 30px;
+            margin: 2px;
+            transition: none;
+        }
+        .btn#prev{
+            order: 1;
+        }
+        .progress-container{
+            order: 2;
+        }
+        .btn#next{
+            order: 3;
+        }
+    }
+    @media(max-height: 175px){
+        .circle:nth-child(3),.circle:nth-child(4),.circle:nth-child(5){
+            display: none;
+        }
+        .circle:nth-child(2){
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 20%;
+            border: 1px solid steelblue;
+            width: 50px;
+        }
+    }
 }
