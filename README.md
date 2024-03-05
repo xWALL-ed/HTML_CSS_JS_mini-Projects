@@ -1,9 +1,16 @@
 # HTML_CSS_JS_mini-Projects
 HTML CSS and JS, Trivial Projects
-
-Note: Gifs with <a href="https://www.cockos.com/licecap/"> LICEcap <a>
+<br>
+<br>
+<br>
+> [!NOTE]
+> Gifs with <a href="https://www.cockos.com/licecap/"> LICEcap <a>
+<br>
+<br>
+<br>
 
 * <h4>Demo : Expanding Cards </h4>
+
 
 * <h4>Demo : Progress Steps </h4>
 ![Progress_Step](https://github.com/xWALL-ed/HTML_CSS_JS_mini-Projects/assets/108077942/3b118c58-f40e-4e07-adb1-28173ce20279)
