@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.split-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+}
+
+.split-container .bg{
+    height: 100%;
+    width: 33%;
+    flex: 0.5;
+    transition: flex 1s ease 0.3s, background-size 0.5s ease 0.7s;
+    overflow: hidden;
+}
+.bg .btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 12rem;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+.bg h1{
+    font-size: 3rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%);
+    white-space: nowrap;
+    transition: all 0.5s ease-in-out 0.2s;
+    margin: 0;
+}
+
+.split-container .bg.left{
+    display: flex;
+    background: url("https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center;
+    background-size: auto 100%;
+    position: relative;
+}
+.bg.left .left-cover{
+    background-color: rgba(87, 84, 236, 0.7);
+    height: 100%;
+    width: 100%;
+}
+.bg.left:hover{
+    flex:3;
+    background-size: auto calc(100% + 5%);
+}
+.bg.left:hover h1{
+    top: calc(50% - 80px);
+    opacity: 1;
+    transition: all 1s ease-out 0.5s;
+}
+.bg.left:hover .btn{
+    top: 50%;
+    opacity: 1;
+    transition: all 1s ease 0.7s;
+}
+
+
+.split-container .bg.middle{
+    display: flex;
+    background: url("https://images.unsplash.com/photo-1621259182978-fbf93132d53d?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center;
+    background-size: auto 100%;
+    position: relative;
+}
+.bg.middle .middle-cover{
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 100%;
+    width: 100%;
+}
+.bg.middle:hover{
+    flex:3;
+    background-size: auto calc(100% + 5%);
+
+}
+.bg.middle:hover h1{
+    top: calc(50% - 80px);
+    opacity: 1;
+    transition: all 1s ease-out 0.5s;
+}
+.bg.middle:hover .btn{
+    top: 50%;
+    opacity: 1;
+    transition: all 1s ease 0.7s;
+}
+
+
+.split-container .bg.right{
+    display: flex;
+    background: url("https://images.unsplash.com/photo-1604586409773-61d0738e5aa1?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center;
+    background-size: auto 100%;
+    position: relative;
+}
+.bg.right .right-cover{
+    background-color: rgba(43, 43, 43, 0.8);
+    height: 100%;
+    width: 100%;
+}
+.bg.right:hover{
+    flex:3;
+    background-size: auto calc(100% + 5%);
+}
+.bg.right:hover h1{
+    top: calc(50% - 80px);
+    opacity: 1;
+    transition: all 1s ease-out 0.5s;
+}
+.bg.right:hover .btn{
+    top: 50%;
+    opacity: 1;
+    transition: all 1s ease 0.7s;
+}
+/* if with x then height have to be more then x/2 */
+@media (min-aspect-ratio: 2/1){
+    .split-container .bg.left{
+        background-size: cover;
+    }
+    .bg.left:hover{
+        background-size: cover;
+    }
+    .split-container .bg.middle{
+        background-size: cover;
+    }
+    .bg.middle:hover{
+        background-size: cover;
+    }
+    .split-container .bg.right{
+        background-size: cover;
+    }
+    .bg.right:hover{
+        background-size: cover;
+    }
+}
+/* 500 x 300 minimum all good*/
